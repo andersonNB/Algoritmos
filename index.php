@@ -10,17 +10,54 @@ while ($a > $b) {
     $valor++;
 }
 
-$sumaA = 5;
+$sumaA = 3;
 $sumaB = 1;
-$sumaRespladoB = 1;
-$sumaAMostrar = 1;
+$sumaRespladoA = 3;
 $resultado = 0;
 
-while ($sumaRespladoB < $sumaA) {
+while ($sumaRespladoA >= 0) {
 
-    $sumaRespladoB++;
+    $sumaRespladoA--;
     $resultado++;
 }
+// Multiplicación
+$multiA = 2;
+$multiB = 3;
+$multiAmostrarB = 3;
+$multiResult = 0;
+
+while ($multiB > 0) {
+
+    $multiB--;
+    $multiResult += $multiA;
+}
+
+//División
+$dividendoAMostrar = 7;
+$dividendo = 7;
+$divisor = 2;
+$resta = $contador = 0;
+
+while ($dividendo > 0) {
+    //0
+    //5 = 7 - 2
+    //3 = 5 - 2
+    //1 = 3 - 2
+    //-1 = 1 - 2
+    $resta = $dividendo - $divisor;
+    if($resta < 0){
+        //-1
+        $sobrante = $resta;
+    }
+    //7
+    //5 = 7-2
+    //3 = 5- 2
+    //1 = 3-2
+    //-1 = 1-2
+    $dividendo = $dividendo - $divisor;
+    $contador++;
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -34,8 +71,12 @@ while ($sumaRespladoB < $sumaA) {
 </head>
 
 <body>
+    <h1 style="text-align: center;">Operaciones basicas</h1>
     <h3><?php echo "La diferencia entre: " . $a . "-" . $baux . "= " . $valor; ?></h3>
-    <h3><?php echo "La suma es: " . $sumaA . "+" . $sumaAMostrar . "= " . $resultado; ?></h3>
+    <h3><?php echo "La suma es: " . $sumaA . "+" . $sumaB . "= " . $resultado; ?></h3>
+    <h3><?php echo "Multiplicación: " . $multiA . " * " . $multiAmostrarB . " = " . $multiResult; ?></h3>
+    <h3><?php echo "División: " . $dividendoAMostrar . " / " . $divisor . " = " . $contador; ?></h3>
+
 </body>
 
 </html>
