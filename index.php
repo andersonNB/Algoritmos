@@ -86,6 +86,24 @@ while ($numeroFactoDisminuir > 0) {
     }
 }
 
+//Números primos
+//Si tiene unicamente dos divisores el mismo y el 1
+$valorPrimo = 20;
+$valorPrimoMostrar = 20;
+$primo = "Es primo";
+$contador = 0;
+for ($i = 1; $i <= $valorPrimo/2; $i++) {
+    if ($contador < 2) {
+        if ($valorPrimo % $i == 0) {
+            $contador++;
+        }
+    }else{
+        $primo = "No es primo";
+    }
+}
+
+
+//Números perfectos
 
 ?>
 <!DOCTYPE html>
@@ -106,6 +124,7 @@ while ($numeroFactoDisminuir > 0) {
     <h3><?php echo "División: " . $dividendoAMostrar . " / " . $divisor . " = " . $contador . "($dividendo)"; ?></h3>
     <h3><?php echo "La potencia de " . $numero . " a la " . $potenciaAMostrar . " es: " . $resultadoPotencia; ?></h3>
     <h3><?php echo "Factorial de " . $numeroFactoMostrar . " es: " . $numeroFacto; ?></h3>
+    <h3><?php echo "El número: " . $valorPrimoMostrar . " " . $primo ?></h3>
 
 </body>
 
