@@ -38,24 +38,52 @@ $dividendo = 7;
 $divisor = 2;
 $resta = $contador = 0;
 
-while ($dividendo > 0) {
+//$dividendo >0 -> mi forma
+while ($dividendo >= $divisor) {
+    $contador++;
+    $dividendo -= $divisor;
     //0
     //5 = 7 - 2
     //3 = 5 - 2
     //1 = 3 - 2
     //-1 = 1 - 2
-    $resta = $dividendo - $divisor;
-    if($resta < 0){
-        //-1
-        $sobrante = $resta;
+    // $resta = $dividendo - $divisor;
+    // if($resta < 0){
+    //     //-1
+    //     $sobrante = $resta;
+    // }
+    // //7
+    // //5 = 7-2
+    // //3 = 5- 2
+    // //1 = 3-2
+    // //-1 = 1-2
+    // $dividendo = $dividendo - $divisor;
+    // $contador++;
+}
+
+//Potencia
+$numero = 3;
+$potencia = 4;
+$potenciaAMostrar = 4;
+$resultadoPotencia = 1;
+
+while ($potencia > 0) {
+
+    $resultadoPotencia *= $numero;
+    $potencia--;
+}
+
+//Factorial
+$numeroFactoMostrar = 7;
+$numeroFacto = $numeroFactoDisminuir = 7;
+
+while ($numeroFactoDisminuir > 0) {
+
+    $numeroFactoDisminuir--;
+    if ($numeroFactoDisminuir == 0) {
+    } else {
+        $numeroFacto *= $numeroFactoDisminuir;
     }
-    //7
-    //5 = 7-2
-    //3 = 5- 2
-    //1 = 3-2
-    //-1 = 1-2
-    $dividendo = $dividendo - $divisor;
-    $contador++;
 }
 
 
@@ -75,7 +103,9 @@ while ($dividendo > 0) {
     <h3><?php echo "La diferencia entre: " . $a . "-" . $baux . "= " . $valor; ?></h3>
     <h3><?php echo "La suma es: " . $sumaA . "+" . $sumaB . "= " . $resultado; ?></h3>
     <h3><?php echo "Multiplicación: " . $multiA . " * " . $multiAmostrarB . " = " . $multiResult; ?></h3>
-    <h3><?php echo "División: " . $dividendoAMostrar . " / " . $divisor . " = " . $contador; ?></h3>
+    <h3><?php echo "División: " . $dividendoAMostrar . " / " . $divisor . " = " . $contador . "($dividendo)"; ?></h3>
+    <h3><?php echo "La potencia de " . $numero . " a la " . $potenciaAMostrar . " es: " . $resultadoPotencia; ?></h3>
+    <h3><?php echo "Factorial de " . $numeroFactoMostrar . " es: " . $numeroFacto; ?></h3>
 
 </body>
 
